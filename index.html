@@ -1,14 +1,857 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rudra Prasad | Life Beyond Work</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rudra Prasad | Life Beyond Engineering</title>
+
+<meta name="description" content="Discover the life, creative journey, cultural heritage, social contributions and personal achievements of Rudra Prasad.">
+
+<link rel="canonical" href="https://life.rudraprasad.com/">
+<link rel="icon" type="image/png" href="https://rudraprasad.com/favicon.png">
+<link rel="apple-touch-icon" href="https://rudraprasad.com/favicon.png">
+
+<meta property="og:title" content="Rudra Prasad | Life Beyond Engineering">
+<meta property="og:description" content="My roots. My journey. My life beyond engineering.">
+<meta property="og:url" content="https://life.rudraprasad.com/">
+<meta property="og:type" content="website">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #0b1018;
+    --card: #141d29;
+    --gold: #d9b679;
+    --white: #f5f5f5;
+    --muted: #a5afbd;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--white);
+    line-height: 1.8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11,16,24,.96);
+    border-bottom: 1px solid #283342;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 75px;
+}
+
+.brand {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.menu-button {
+    display: none;
+    background: transparent;
+    color: white;
+    border: 0;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg,
+        rgba(6,11,18,.97),
+        rgba(6,11,18,.55)),
+        url('cover.jpg') center/cover;
+}
+
+.hero-content {
+    max-width: 750px;
+    padding: 90px 0;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(50px,8vw,100px);
+    font-weight: normal;
+    line-height: 1.15;
+    margin: 25px 0;
+}
+
+.hero h2 {
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.hero p {
+    color: #d0d5dc;
+    font-size: 17px;
+    margin: 25px 0;
+    max-width: 650px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--gold);
+    color: #0b1018;
+    padding: 12px 26px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 8px 10px 0 0;
+}
+
+.button-outline {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+section {
+    padding: 85px 0;
+    scroll-margin-top: 75px;
+}
+
+.section-heading {
+    font-family: Georgia, serif;
+    font-size: clamp(32px,5vw,48px);
+    font-weight: normal;
+    margin: 12px 0 25px;
+}
+
+section p {
+    color: var(--muted);
+}
+
+.alt {
+    background: #101824;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid #273343;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.card small {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.card h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 12px 0;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.timeline {
+    border-left: 2px solid var(--gold);
+    padding-left: 32px;
+    margin-top: 35px;
+}
+
+.event {
+    position: relative;
+    padding-bottom: 35px;
+}
+
+.event::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    left: -39px;
+    top: 9px;
+}
+
+.event span {
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.event h3 {
+    margin: 6px 0;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.stat {
+    text-align: center;
+    padding: 30px 15px;
+    border: 1px solid #334050;
+}
+
+.stat strong {
+    font-family: Georgia, serif;
+    display: block;
+    font-size: 45px;
+    color: var(--gold);
+}
+
+.stat p {
+    font-size: 13px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.gallery figure {
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--card);
+}
+
+.gallery img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery figcaption {
+    padding: 12px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.quote {
+    text-align: center;
+    padding: 75px 20px;
+    background: #182332;
+}
+
+.quote blockquote {
+    font-family: Georgia, serif;
+    font-size: clamp(25px,4vw,42px);
+    color: var(--gold);
+    max-width: 850px;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid #283342;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+footer a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+@media(max-width:900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards, .gallery {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: #101824;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+@media(max-width:550px) {
+    section {
+        padding: 55px 0;
+    }
+
+    .cards, .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        height: 380px;
+    }
+
+    .hero {
+        min-height: 75vh;
+    }
+}
+
+</style>
 </head>
+
 <body>
-    <h1>Rudra Prasad</h1>
-    <h2>Life Beyond Work</h2>
-    <p>My Journey, My Experiences, My Story.</p>
-    <p>Website Coming Soon.</p>
+
+<header>
+    <nav class="container">
+
+        <div class="brand">RP | LIFE</div>
+
+        <button class="menu-button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        onclick="toggleMenu(this)">☰</button>
+
+        <ul id="navigation">
+            <li><a href="#story">My Story</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#creative">Creative Work</a></li>
+            <li><a href="#social">Social Work</a></li>
+            <li><a href="#heritage">Heritage</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="https://rudraprasad.com/">Career ↗</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<main>
+
+<div class="hero">
+    <div class="container">
+        <div class="hero-content">
+
+            <span class="eyebrow">The person behind the profession</span>
+
+            <h1>Rudra Prasad</h1>
+
+            <h2>Life Beyond Engineering</h2>
+
+            <p>
+                From the mountains of Uttarakhand to the
+                islands of the Maldives — a journey shaped
+                by creativity, culture, exploration,
+                resilience and the courage to keep evolving.
+            </p>
+
+            <a class="button" href="#story">Explore My Story</a>
+
+            <a class="button button-outline"
+               href="https://rudraprasad.com/">
+               Professional Portfolio ↗
+            </a>
+
+        </div>
+    </div>
+</div>
+
+<section id="story">
+    <div class="container about-grid">
+
+        <img class="profile-image"
+             src="profile.jpg"
+             alt="Rudra Prasad"
+             onerror="this.style.display='none'">
+
+        <div>
+            <span class="eyebrow">About Me</span>
+
+            <h2 class="section-heading">
+                Rooted in the Himalayas.
+                Inspired by the World.
+            </h2>
+
+            <p>
+                I come from Chamoli, Uttarakhand, a region
+                known for its magnificent mountains,
+                cultural richness and deep connection
+                with nature.
+            </p>
+
+            <br>
+
+            <p>
+                While engineering defines my professional
+                journey, creativity, filmmaking, cultural
+                heritage, social responsibility and
+                exploration represent another important
+                part of who I am.
+            </p>
+
+            <br>
+
+            <p>
+                This website is a space to document the
+                experiences, memories and milestones that
+                have shaped my life beyond my profession.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="journey" class="alt">
+    <div class="container">
+
+        <span class="eyebrow">Milestones</span>
+        <h2 class="section-heading">My Life Journey</h2>
+
+        <div class="timeline">
+
+            <div class="event">
+                <span>Early Life</span>
+                <h3>Growing Up in Uttarakhand</h3>
+                <p>
+                    A childhood surrounded by Himalayan
+                    landscapes, traditional values and
+                    rich cultural heritage.
+                </p>
+            </div>
+
+            <div class="event">
+                <span>2015</span>
+                <h3>Social Service</h3>
+                <p>
+                    Began contributing to blood donor
+                    coordination and community support.
+                </p>
+            </div>
+
+            <div class="event">
+                <span>2016</span>
+                <h3>Cultural Recognition</h3>
+                <p>
+                    Participated in traditional folk dance
+                    at Krishi Udyan Evam Paryatan Vikas
+                    Mela in Gairsain.
+                </p>
+            </div>
+
+            <div class="event">
+                <span>2017</span>
+                <h3>A New Professional Chapter</h3>
+                <p>
+                    Completed my Electrical Engineering
+                    diploma and began my engineering career.
+                </p>
+            </div>
+
+            <div class="event">
+                <span>2019</span>
+                <h3>Innovation & Manufacturing</h3>
+                <p>
+                    Explored electrical product manufacturing
+                    through Devbhoomi Electricals and the
+                    ASOZ ceiling fan initiative.
+                </p>
+            </div>
+
+            <div class="event">
+                <span>Creative Journey</span>
+                <h3>Acting & Filmmaking</h3>
+                <p>
+                    Explored regional cinema and music
+                    through acting, direction, production,
+                    choreography and cinematography.
+                </p>
+            </div>
+
+            <div class="event">
+                <span>2024 — Present</span>
+                <h3>Life in the Maldives</h3>
+                <p>
+                    A new international chapter combining
+                    professional growth, island life and
+                    exploration.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="creative">
+    <div class="container">
+
+        <span class="eyebrow">Beyond the Ordinary</span>
+        <h2 class="section-heading">Music & Filmmaking</h2>
+
+        <p>
+            Celebrating Uttarakhand's cultural identity
+            through regional music and visual storytelling.
+        </p>
+
+        <div class="cards">
+
+            <article class="card">
+                <small>2023 | FILMMAKING</small>
+                <h3>Meri Dagdya</h3>
+                <p>
+                    Direction, production, choreography
+                    and cinematography.
+                </p>
+            </article>
+
+            <article class="card">
+                <small>2021 | ACTING</small>
+                <h3>Hey Suwa</h3>
+                <p>
+                    Lead acting performance in a
+                    regional music video.
+                </p>
+            </article>
+
+            <article class="card">
+                <small>ACTING</small>
+                <h3>Meri Nilima</h3>
+                <p>
+                    Lead acting performance in
+                    Uttarakhandi music.
+                </p>
+            </article>
+
+            <article class="card">
+                <small>ACTING</small>
+                <h3>Chhoti Syali Ludra</h3>
+                <p>
+                    A regional music video celebrating
+                    cultural expression.
+                </p>
+            </article>
+
+            <article class="card">
+                <small>TRIBUTE & ACTING</small>
+                <h3>Louti Aounla Pahada</h3>
+                <p>
+                    A tribute to the courage and
+                    sacrifice of Indian Army soldiers.
+                </p>
+            </article>
+
+            <article class="card">
+                <small>CREATIVE INTERESTS</small>
+                <h3>Visual Storytelling</h3>
+                <p>
+                    Photography, cinematography,
+                    direction and creative exploration.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section id="social" class="alt">
+    <div class="container">
+
+        <span class="eyebrow">Giving Back</span>
+
+        <h2 class="section-heading">
+            Humanitarian & Social Contributions
+        </h2>
+
+        <p>
+            Through Devbhoomi Online Blood Bank,
+            I participated in coordinating blood donors
+            and supporting people requiring urgent
+            blood assistance.
+        </p>
+
+        <div class="stats">
+
+            <div class="stat">
+                <strong>280+</strong>
+                <p>Blood Assistance Cases Coordinated</p>
+            </div>
+
+            <div class="stat">
+                <strong>2015</strong>
+                <p>Social Service Journey Began</p>
+            </div>
+
+            <div class="stat">
+                <strong>7 Years</strong>
+                <p>Community Service Journey</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="heritage">
+    <div class="container">
+
+        <span class="eyebrow">My Roots</span>
+
+        <h2 class="section-heading">
+            Uttarakhand & Cultural Heritage
+        </h2>
+
+        <div class="cards">
+
+            <article class="card">
+                <small>HOMETOWN</small>
+                <h3>Chamoli</h3>
+                <p>
+                    My roots lie in the Himalayan
+                    landscapes of Uttarakhand.
+                </p>
+            </article>
+
+            <article class="card">
+                <small>CULTURE</small>
+                <h3>Folk Traditions</h3>
+                <p>
+                    A connection with regional music,
+                    traditional dance and cultural festivals.
+                </p>
+            </article>
+
+            <article class="card">
+                <small>RECOGNITION</small>
+                <h3>Cultural Participation</h3>
+                <p>
+                    Recognized for participation in
+                    traditional folk dance at Gairsain
+                    in 2016.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="alt">
+    <div class="container">
+
+        <span class="eyebrow">Moments & Memories</span>
+        <h2 class="section-heading">Life Through My Lens</h2>
+
+        <p>
+            Landscapes, underwater adventures,
+            cultural memories and life experiences.
+        </p>
+
+        <div class="gallery">
+
+            <figure hidden>
+                <img src="life1.jpg" alt="Himalayan landscapes"
+                     loading="lazy"
+                     onload="this.parentElement.hidden=false">
+                <figcaption>Himalayan Landscapes</figcaption>
+            </figure>
+
+            <figure hidden>
+                <img src="life2.jpg" alt="Island life"
+                     loading="lazy"
+                     onload="this.parentElement.hidden=false">
+                <figcaption>Island Life</figcaption>
+            </figure>
+
+            <figure hidden>
+                <img src="life3.jpg" alt="Underwater exploration"
+                     loading="lazy"
+                     onload="this.parentElement.hidden=false">
+                <figcaption>Underwater Exploration</figcaption>
+            </figure>
+
+            <figure hidden>
+                <img src="life4.jpg" alt="Creative journey"
+                     loading="lazy"
+                     onload="this.parentElement.hidden=false">
+                <figcaption>Creative Journey</figcaption>
+            </figure>
+
+            <figure hidden>
+                <img src="life5.jpg" alt="Cultural heritage"
+                     loading="lazy"
+                     onload="this.parentElement.hidden=false">
+                <figcaption>Cultural Heritage</figcaption>
+            </figure>
+
+            <figure hidden>
+                <img src="life6.jpg" alt="Personal memories"
+                     loading="lazy"
+                     onload="this.parentElement.hidden=false">
+                <figcaption>Personal Memories</figcaption>
+            </figure>
+
+        </div>
+    </div>
+</section>
+
+<div class="quote">
+    <blockquote>
+        “Life is not defined by a single profession,
+        but by the experiences, values and stories
+        we carry along the way.”
+    </blockquote>
+</div>
+
+<section id="connect">
+
+    <div class="container" style="text-align:center">
+
+        <span class="eyebrow">Two Worlds. One Journey.</span>
+
+        <h2 class="section-heading">
+            Explore My Professional Side
+        </h2>
+
+        <p>
+            Discover my hospitality engineering career,
+            leadership experience, technical projects
+            and professional certifications.
+        </p>
+
+        <br>
+
+        <a class="button"
+           href="https://rudraprasad.com/">
+           Visit Professional Website ↗
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p>
+        © <span id="year"></span> Rudra Prasad.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Life Beyond Engineering |
+        <a href="https://rudraprasad.com/">
+            Professional Portfolio
+        </a>
+    </p>
+
+</footer>
+
+<script>
+
+function toggleMenu(button) {
+    const menu = document.getElementById("navigation");
+    const opened = menu.classList.toggle("active");
+    button.setAttribute("aria-expanded", opened);
+}
+
+document.querySelectorAll("#navigation a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("navigation")
+        .classList.remove("active");
+        document.querySelector(".menu-button")
+        .setAttribute("aria-expanded", "false");
+    });
+});
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
 </body>
 </html>
